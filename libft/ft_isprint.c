@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wchumane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/01 22:03:21 by wchumane          #+#    #+#             */
-/*   Updated: 2023/09/01 22:26:01 by wchumane         ###   ########.fr       */
+/*   Created: 2023/09/01 23:30:25 by wchumane          #+#    #+#             */
+/*   Updated: 2023/09/01 23:30:55 by wchumane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+int	ft_isprint(int c)
 {
-	if ((c >= 65 && c <= 90)
-		|| (c >= 97 && c <= 122))
+	if (c >= 32 && c <= 126)
 	{
 		return (1);
 	}
 	return (0);
 }
-
-#include <stdio.h>
-#include <ctype.h>
-int main()
-{
-	int c = 'a';
-	printf("mine: %d\n", ft_isalpha(c));
-	printf("func: %d\n", isalpha(c));
-
-	return (0);
-}
+// #include <stdio.h>
+// #include <ctype.h>
+// int main()
+// {
+// 	int c = 'a';
+// 	printf("mine: %d\n", ft_isprint(c));
+// 	printf("func: %d\n", isprint(c));
+//
+// 	return (0);
+// }
