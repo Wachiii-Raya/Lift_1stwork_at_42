@@ -6,7 +6,7 @@
 /*   By: wchumane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 21:19:43 by wchumane          #+#    #+#             */
-/*   Updated: 2023/09/01 21:24:26 by wchumane         ###   ########.fr       */
+/*   Updated: 2023/09/01 21:35:06 by wchumane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,28 @@ int	ft_atoi(char *str)
 		num = num * -1;
 	return (num);
 }
-/*
-#include <stdio.h>
-int	main(void)
-{
-	char str[] = "  ---+++--2434gg2";
 
-	printf("%d\n", ft_atoi(str));
-}*/
+int main(void)
+{
+	char	str[300];
+
+	strcpy(str, "   ---+--+1234ab567");
+	printf("Input : %s\n", str);
+	printf("Expect: -1234\n");
+	printf("Result: %d\n", ft_atoi(str));
+
+	strcpy(str, "   --- +--+12a34ab567");
+	printf("Input : %s\n", str);
+	printf("Expect: 0\n");
+	printf("Result: %d\n", ft_atoi(str));
+
+	strcpy(str, "   1234ab567");
+	printf("Input : %s\n", str);
+	printf("Expect: 1234\n");
+	printf("Result: %d\n", ft_atoi(str));
+
+	strcpy(str, "   ---+--+123-4ab567");
+	printf("Input : %s\n", str);
+	printf("Expect: -123\n");
+	printf("Result: %d\n", ft_atoi(str));
+}
