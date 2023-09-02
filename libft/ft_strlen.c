@@ -6,11 +6,13 @@
 /*   By: wchumane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 21:26:18 by wchumane          #+#    #+#             */
-/*   Updated: 2023/09/01 21:37:48 by wchumane         ###   ########.fr       */
+/*   Updated: 2023/09/02 23:44:30 by wchumane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include "libft.h"
+
+size_t	ft_strlen(const char *str)
 {
 	int	counter;
 
@@ -23,9 +25,9 @@ int	ft_strlen(char *str)
 	return (counter);
 }
 
-int	main(void)
-{
-	printf("Expect: Hello = %d\n", (int) strlen("Hello"));
-	printf("Result: Hello = %d\n", ft_strlen("Hello"));
-	return (0);
-}
+// int	main(void)
+// {
+// 	printf("Expect: Hello = %d\n", (int) strlen("Hello"));
+// 	printf("Result: Hello = %d\n", ft_strlen("Hello"));
+// 	return (0);
+// }

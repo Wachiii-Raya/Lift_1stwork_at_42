@@ -6,42 +6,36 @@
 /*   By: wchumane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 21:30:17 by wchumane          #+#    #+#             */
-/*   Updated: 2023/09/01 21:36:52 by wchumane         ###   ########.fr       */
+/*   Updated: 2023/09/03 01:20:31 by wchumane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlcpy(char *dest, char *src, unsigned int size)
+#include "libft.h"
+
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	int				i;
-	unsigned int	counter;
+	size_t	i;
 
 	i = 0;
-	counter = 0;
-	while (src[counter] != '\0')
-		counter++;
-	if (size != 0)
+	if (size > 0)
 	{
-		while (src[i] != '\0' && i < (size - 1))
+		while (src[i] && i < (size - 1))
 		{
-			dest[i] = src[i];
+			dst[i] = src[i];
 			i++;
 		}
+		dst[i] = 0;
 	}
-	dest[i] = '\0';
-	return (counter);
+	while (src[i])
+		i++;
+	return (i);
 }
-
-int	main(void)
-{
-	char	str[] = "Hello there, Venus";
-	char	dest[19];
-	int		r;
-
-	r = ft_strlcpy(dest, str, 19);
-	printf("n=10, r18 = %d, %s", r, dest);
-	r = ft_strlcpy(dest, str, 10);
-	printf("n=10, r18 = %d, %s", r, dest);
-	r = ft_strlcpy(dest, str, 1);
-	printf("n=1, r18 = %d, %s", r, dest);
-	return (0);
-}
+// #include <stdio.h>
+// #include <string.h>
+// int main(void)
+// {
+// 	char src[] = "Hello";
+// 	char dst[] = "Hello";
+// 	printf("mine: %zu\n", ft_strlcpy(dst, src, 0));
+// 	printf("func: %zu\n", strlcpy(dst, src, 0));
+// }
