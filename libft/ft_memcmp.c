@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wchumane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/01 23:31:18 by wchumane          #+#    #+#             */
-/*   Updated: 2023/09/09 02:14:57 by wchumane         ###   ########.fr       */
+/*   Created: 2023/09/09 18:14:12 by wchumane          #+#    #+#             */
+/*   Updated: 2023/09/10 01:55:22 by wchumane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned int	i;
+	size_t			i;
+	unsigned char	*ptr1;
+	unsigned char	*ptr2;
 
 	i = 0;
-	while (i < len)
-	{
-		((unsigned char *)b)[i] = (unsigned char)c;
+	ptr1 = (unsigned char *)s1;
+	ptr2 = (unsigned char *)s2;
+	if (n == 0)
+		return (0);
+	while ((ptr1[i] == ptr2[i]) && i < n - 1)
 		i++;
-	}
-	return ((unsigned char *)b);
+	return ((unsigned char)ptr1[i] - (unsigned char)ptr2[i]);
 }
-// #include <stdio.h>
-// #include <string.h>
-// int main()
-// {
-// 	char str[50] = "GeeksForGeeks is for programming geeks.";
-// 	printf("mine: %s\n", ft_memset(str + 13, '.', 8));
-// 	printf("func: %s\n", memset(str + 13, '.', 8));
-// 	return (0);
-// }

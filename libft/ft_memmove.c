@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wchumane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/01 23:31:18 by wchumane          #+#    #+#             */
-/*   Updated: 2023/09/09 02:14:57 by wchumane         ###   ########.fr       */
+/*   Created: 2023/09/08 19:52:28 by wchumane          #+#    #+#             */
+/*   Updated: 2023/09/09 01:37:14 by wchumane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned int	i;
+	char	*temp;
 
-	i = 0;
-	while (i < len)
+	temp = dst;
+	if (dst == NULL && src == NULL)
+		return (NULL);
+	if (dst < src)
 	{
-		((unsigned char *)b)[i] = (unsigned char)c;
-		i++;
+		while (len--)
+			*temp++ = *(char *)src++;
 	}
-	return ((unsigned char *)b);
+	else
+	{
+		temp += len;
+		src += len;
+		while (len--)
+			*--temp = *(char *)--src;
+	}
+	return (dst);
 }
-// #include <stdio.h>
-// #include <string.h>
-// int main()
-// {
-// 	char str[50] = "GeeksForGeeks is for programming geeks.";
-// 	printf("mine: %s\n", ft_memset(str + 13, '.', 8));
-// 	printf("func: %s\n", memset(str + 13, '.', 8));
-// 	return (0);
-// }

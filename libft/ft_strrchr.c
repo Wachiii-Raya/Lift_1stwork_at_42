@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wchumane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/01 23:31:18 by wchumane          #+#    #+#             */
-/*   Updated: 2023/09/09 02:14:57 by wchumane         ###   ########.fr       */
+/*   Created: 2023/09/09 02:10:51 by wchumane          #+#    #+#             */
+/*   Updated: 2023/09/09 15:23:26 by wchumane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+char	*ft_strrchr(const char *s, int c)
 {
-	unsigned int	i;
+	int				i;
+	unsigned char	d;
 
-	i = 0;
-	while (i < len)
+	d = c;
+	i = ft_strlen(s);
+	if (d == '\0')
 	{
-		((unsigned char *)b)[i] = (unsigned char)c;
-		i++;
+		return ((char *)s + (i));
 	}
-	return ((unsigned char *)b);
+	while (i >= 0)
+	{
+		if (s[i] == d)
+			return ((char *)s + i);
+		i--;
+	}
+	return (NULL);
 }
-// #include <stdio.h>
-// #include <string.h>
-// int main()
-// {
-// 	char str[50] = "GeeksForGeeks is for programming geeks.";
-// 	printf("mine: %s\n", ft_memset(str + 13, '.', 8));
-// 	printf("func: %s\n", memset(str + 13, '.', 8));
-// 	return (0);
-// }

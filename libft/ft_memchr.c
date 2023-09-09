@@ -1,35 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wchumane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/01 23:31:18 by wchumane          #+#    #+#             */
-/*   Updated: 2023/09/09 02:14:57 by wchumane         ###   ########.fr       */
+/*   Created: 2023/09/09 16:11:13 by wchumane          #+#    #+#             */
+/*   Updated: 2023/09/10 01:50:48 by wchumane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+void	*ft_memchr(const void *s, int c, size_t n)
+
 {
-	unsigned int	i;
+	size_t			i;
+	unsigned char	*str;
+	unsigned char	ch;
 
 	i = 0;
-	while (i < len)
+	ch = (unsigned char)c;
+	str = (unsigned char *)s;
+	while (i < n)
 	{
-		((unsigned char *)b)[i] = (unsigned char)c;
+		if (str[i] == ch)
+			return (str + i);
 		i++;
 	}
-	return ((unsigned char *)b);
+	return (NULL);
 }
-// #include <stdio.h>
-// #include <string.h>
-// int main()
+
+// int main(void)
 // {
-// 	char str[50] = "GeeksForGeeks is for programming geeks.";
-// 	printf("mine: %s\n", ft_memset(str + 13, '.', 8));
-// 	printf("func: %s\n", memset(str + 13, '.', 8));
-// 	return (0);
+// 	char memstr2[20] = "/|\x12\xff\x09\0\x42\042\0\42|\\";
+
+// 	int *a = memchr(memstr2, '\0', 12);
+
+// 	int *b = ft_memchr(memstr2, '\0', 12);
+// 	printf("func: %p\n", a);
+// 	printf("mine: %p\n", b);
 // }

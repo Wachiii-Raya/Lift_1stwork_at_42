@@ -6,7 +6,7 @@
 /*   By: wchumane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/03 02:07:40 by wchumane          #+#    #+#             */
-/*   Updated: 2023/09/03 02:23:44 by wchumane         ###   ########.fr       */
+/*   Updated: 2023/09/10 01:51:26 by wchumane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	char	*temp;
 
 	temp = dest;
+	if (dest == NULL && src == NULL)
+		return (NULL);
 	while (n)
 	{
 		n--;
