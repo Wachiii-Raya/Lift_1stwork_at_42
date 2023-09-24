@@ -6,18 +6,19 @@
 /*   By: wchumane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 21:38:27 by wchumane          #+#    #+#             */
-/*   Updated: 2023/09/03 01:41:25 by wchumane         ###   ########.fr       */
+/*   Updated: 2023/09/24 14:52:06 by wchumane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t
-	ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	unsigned int	i;
 	unsigned int	j;
 
+	if (!dst)
+		return (ft_strlen(src));
 	if (dstsize <= ft_strlen(dst))
 		return (ft_strlen(src) + dstsize);
 	i = ft_strlen(dst);
@@ -31,3 +32,13 @@ size_t
 	dst[i] = '\0';
 	return (ft_strlen(dst) + ft_strlen(&src[j]));
 }
+
+// #include <stdio.h>
+// #include <string.h>
+// int main(void)
+// {
+// 	char src[] = "Hello5555";
+// 	char dst[] = "Hello5555";
+// 	printf("mine: %zu\n", ft_strlcat(NULL, src, 0));
+// 	printf("func: %zu\n", strlcat(NULL, src, 0));
+// }

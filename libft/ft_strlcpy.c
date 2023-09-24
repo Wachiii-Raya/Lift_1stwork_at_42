@@ -6,7 +6,7 @@
 /*   By: wchumane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 21:30:17 by wchumane          #+#    #+#             */
-/*   Updated: 2023/09/03 01:20:31 by wchumane         ###   ########.fr       */
+/*   Updated: 2023/09/24 14:33:05 by wchumane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 // {
 // 	char src[] = "Hello";
 // 	char dst[] = "Hello";
-// 	printf("mine: %zu\n", ft_strlcpy(dst, src, 0));
-// 	printf("func: %zu\n", strlcpy(dst, src, 0));
+// 	printf("mine: %zu\n", ft_strlcpy(dst, NULL, 4));
+// 	printf("func: %zu\n", strlcpy(dst, "", 4));
 // }

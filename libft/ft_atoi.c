@@ -6,7 +6,7 @@
 /*   By: wchumane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 21:19:43 by wchumane          #+#    #+#             */
-/*   Updated: 2023/09/24 10:52:02 by wchumane         ###   ########.fr       */
+/*   Updated: 2023/09/24 14:34:21 by wchumane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,22 +47,22 @@ int	ft_atoi(const char *s)
 // #include <string.h>
 // int main(void)
 // {
-	// char str[] = "9223372036854775807";
-	// char str[] = "9223372036854775808878876788767";
-	// int result1 = atoi(str);
-	// int result2 = ft_atoi(str);
-	// printf("original result1 : %d\n", result1);
-	// printf("my func result2 : %d\n", result2);
+// 	char str[] = "9223372036854775807";
+// 	char str[] = "9223372036854775808878876788767";
+// 	int result1 = atoi(str);
+// 	int result2 = ft_atoi(str);
+// 	printf("original result1 : %d\n", result1);
+// 	printf("my func result2 : %d\n", result2);
 
-	// char str1[] = "   ---+--+1234ab567";
-	// int result11 = atoi(str1);
-	// int result21 = ft_atoi(str1);
-	// printf("original result1 : %d\n", result11);
-	// printf("my func result2 : %d\n", result21);
+// 	char str1[] = "   ---+--+1234ab567";
+// 	int result11 = atoi(str1);
+// 	int result21 = ft_atoi(str1);
+// 	printf("original result1 : %d\n", result11);
+// 	printf("my func result2 : %d\n", result21);
 
-	// char str2[] = "   1234ab567";
-	// int result12 = atoi(str2);
-	// int result22 = ft_atoi(str2);
-	// printf("original result1 : %d\n", result12);
-	// printf("my func result2 : %d\n", result22);
+// 	char str2[] = "   1234ab567";
+// 	int result12 = atoi(str2);
+// 	int result22 = ft_atoi(str2);
+// 	printf("original result1 : %d\n", result12);
+// 	printf("my func result2 : %d\n", result22);
 // }
