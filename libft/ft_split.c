@@ -6,7 +6,7 @@
 /*   By: wchumane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 18:59:16 by wchumane          #+#    #+#             */
-/*   Updated: 2023/09/24 01:34:30 by wchumane         ###   ########.fr       */
+/*   Updated: 2023/09/24 17:53:33 by wchumane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,13 +34,13 @@ static	int	count_words(char const *s, char c)
 
 static	char	**malloc_2dm(char **ptr, char const *s, size_t words, char c)
 {
-	size_t	i;
+	int		i;
 	size_t	j;
 	size_t	counter;
 
 	i = 0;
 	j = 0;
-	while (i < words)
+	while (i < (int)words)
 	{
 		counter = 0;
 		while (s[j] == c)
@@ -118,4 +118,7 @@ char	**ft_split(char const *s, char c)
 //             printf("ans[%d] :%s\n", j ,ans[j]);
 //             j++;
 //     }
+// 	free(ans[0]);
+// 	free(ans[1]);
+// 	free(ans);
 // }

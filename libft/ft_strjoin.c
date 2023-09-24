@@ -6,7 +6,7 @@
 /*   By: wchumane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/10 03:48:33 by wchumane          #+#    #+#             */
-/*   Updated: 2023/09/10 03:53:21 by wchumane         ###   ########.fr       */
+/*   Updated: 2023/09/24 17:57:30 by wchumane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,3 +34,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ptr[j] = '\0';
 	return (ptr);
 }
+
+// #include <string.h>
+// #include <stdio.h>
+// int main()
+// {
+// 	char *str = ft_strjoin(NULL, "hello");
+// 	printf("%s\n", str);
+// 	return (0);
+// }

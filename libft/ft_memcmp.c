@@ -6,7 +6,7 @@
 /*   By: wchumane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/09 18:14:12 by wchumane          #+#    #+#             */
-/*   Updated: 2023/09/10 01:55:22 by wchumane         ###   ########.fr       */
+/*   Updated: 2023/09/24 18:29:51 by wchumane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,3 +27,15 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 		i++;
 	return ((unsigned char)ptr1[i] - (unsigned char)ptr2[i]);
 }
+
+// int main(void)
+// {
+// 	int		result;
+
+// 	long a[] = {422,333,112,333,222};
+// 	long b[] = {422,333,112,333,221};
+// 	if ((ft_memcmp(&a, &b, sizeof(a))))
+// 		printf("noooooo");
+// 	else
+// 		printf("okkkie");
+// }

@@ -6,15 +6,15 @@
 /*   By: wchumane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 11:03:41 by wchumane          #+#    #+#             */
-/*   Updated: 2023/09/24 14:35:09 by wchumane         ###   ########.fr       */
+/*   Updated: 2023/09/24 17:57:58 by wchumane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-static int count_length_num(long n)
+static	int	count_length_num(long n)
 {
-	int length;
+	int	length;
 
 	length = 0;
 	if (n == 0)
@@ -32,12 +32,12 @@ static int count_length_num(long n)
 	return (length);
 }
 
-char *ft_itoa(int num)
+char	*ft_itoa(int num)
 {
-	long n;
-	int i;
-	int len;
-	char *temp;
+	long	n;
+	int		i;
+	int		len;
+	char	*temp;
 
 	n = num;
 	i = 0;

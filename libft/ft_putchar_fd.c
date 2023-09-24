@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wchumane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/10 03:26:29 by wchumane          #+#    #+#             */
-/*   Updated: 2023/09/24 17:57:12 by wchumane         ###   ########.fr       */
+/*   Created: 2023/09/24 16:28:53 by wchumane          #+#    #+#             */
+/*   Updated: 2023/09/24 17:10:03 by wchumane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+void	ft_putchar_fd(char c, int fd)
 {
-	char	*ptr;
-	size_t	len;
-
-	len = ft_strlen(s1) + 1;
-	ptr = malloc(len);
-	if (!ptr)
-		return (NULL);
-	ft_strlcpy(ptr, s1, len);
-	return (ptr);
+	write(fd, &c, 1);
 }
 
-// #include <string.h>
-// #include <stdio.h>
-// int main()
+// #include <fcntl.h>
+// #include <unistd.h>
+// int main(void)
 // {
-// 	char *str = ft_strdup("");
-// 	printf("%s\n", str);
-// 	return (0);
+// //	int fd = open("example_fd", O_WRONLY | O_CREAT | O_TRUNC, 0644);
+// 	printf("fd: %d\n", 1);
+// 	ft_putchar_fd('C', 1);
+// 	close(fd);
 // }

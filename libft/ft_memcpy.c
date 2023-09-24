@@ -6,7 +6,7 @@
 /*   By: wchumane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/03 02:07:40 by wchumane          #+#    #+#             */
-/*   Updated: 2023/09/10 01:51:26 by wchumane         ###   ########.fr       */
+/*   Updated: 2023/09/24 18:37:55 by wchumane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,22 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-// #include <stdio.h>
-// #include <string.h>
+#include <stdio.h>
+#include <string.h>
 
-// int main(void) {
+int main(void) {
 //   char str1[10] = "hello";
 //   char str2[10];
 
-//   // Call your own function
+	long	num1[] = {44,54,66};
+	long	num2[3];
+
+	ft_memcpy(num2, num1, sizeof(num1));
+	for (int i = 0; i < 3; i++)
+	{
+		printf("num: %ld\n", num2[i]);
+	}
+  // Call your own function
 //   ft_memcpy(str2, str1, sizeof(str1));
 
 //   // Call the original function
@@ -42,5 +50,4 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 //     printf("The functions are equal.\n");
 //   } else {
 //     printf("The functions are not equal.\n");
-//   }
-// }
+  }
