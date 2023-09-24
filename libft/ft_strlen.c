@@ -6,7 +6,7 @@
 /*   By: wchumane <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/01 21:26:18 by wchumane          #+#    #+#             */
-/*   Updated: 2023/09/02 23:44:30 by wchumane         ###   ########.fr       */
+/*   Updated: 2023/09/24 10:53:58 by wchumane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,12 @@ size_t	ft_strlen(const char *str)
 
 // int	main(void)
 // {
-// 	printf("Expect: Hello = %d\n", (int) strlen("Hello"));
-// 	printf("Result: Hello = %d\n", ft_strlen("Hello"));
+// 	char *str = "Hello";
+// 	char *ptr = str;
+// 	unsigned long number = str;
+// 	printf("Expect: Hello = %zu\n", number);
+
+// 	printf("Result: Hello = %s\n", number+10);
+// 	printf("Result: Hello = %s\n", 4476030846);
 // 	return (0);
 // }
