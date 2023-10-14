@@ -6,7 +6,7 @@
 #    By: wchumane <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/02 15:46:43 by wchumane          #+#    #+#              #
-#    Updated: 2023/09/24 17:34:15 by wchumane         ###   ########.fr        #
+#    Updated: 2023/10/14 14:35:46 by wchumane         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ SRCS	=	ft_atoi.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c \
 			ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c \
 			ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 
-OBJS	= $(SRCS:.c=.o)
+OBJS	= $(SRCS:.c=.o) // if .o
 
 CC		= cc
 RM		= rm -f

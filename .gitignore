@@ -1,2 +1,5 @@
 a.out
-.DS_Store 
+.DS_Store
+example_fd
+.vscode
+tasks.json

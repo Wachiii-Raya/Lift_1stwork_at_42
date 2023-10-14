@@ -37,4 +37,12 @@ maintainer: @wachiii-raya
 | [ft_strdup](/libft/ft_strdup.c)	 | malloc sufficient mem for a copy of the string s1 | char * strdup(const char *s1);  | pointer, if success. null if not |
 | [ft_substr](/libft/ft_substr.c)	 | malloc and extract substring from string s for length len| char *ft_substr(char const *s, unsigned int start, size_t len);| the substring or Null if malloc fail|
 | [ft_strjoin](/libft/ft_strjoin.c)	 | malloc + concat the given strings s1 and s2 onto that mem| char *ft_strjoin(char const *s1, char const *s2); | the new string or null if malloc fail |
-
+| [ft_strtrim](/libft/ft_strtrim.c)  | trim *set characters out of *s1 also allocate mem for stored a copied of trimmed s1 | char *ft_strtrim(char const *s1, char const *set); | the trimmed string if success, NULL if fail.|
+| [ft_split](/libft/ft_split.c)		 | split char c out of *s | char **ft_split(char const *s, char c); | return a new string if success, NULL if fail |
+| [ft_itoa](/libft/ft_itoa.c)		 | convert integer to ascii using malloc		  | char *ft_itoa(int n)	     		  | string of that integer or NULL if malloc fail |
+| [ft_strmapi](/libft/ft_strmapi.c)	 | apply input func w/ each input string (malloc and return new) | char	*ft_strmapi(char const *s, char (*f)(unsigned int, char)); | the string that already applied w/ func. or NULL if allocate fail |
+| [ft_striteri](/libft/ft_striteri.c)| apply input func w/ each input string (no malloc also return) | void	ft_striteri(char *s, void (*f)(unsigned int, char*)) | dose not return a value |
+| [ft_putchar_fd](/libft/ft_putchar_fd.c) | put character to the given file | void	ft_putchar_fd(char c, int fd); | does not return a value |
+| [ft_putstr_fd](/libft/ft_putstr_fd.c) | put string to the given file | void ft_putstr_fd(char *s, int fd); | does not return a value |
+| [ft_putendl_fd](/libft/ft_putendl_fd.c) | similar with putstr but followed by '\n' | void ft_putendl_fd(char *s, int fd); | does not return a value |
+| [ft_putnbr_fd](/libft/ft_putnbr_fd.c) | put the number to the given file | void ft_putnbr_fd(int n, int fd); | does not return a value |
